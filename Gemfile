@@ -7,6 +7,12 @@ gem 'rails', '3.2.2'
 
 gem 'sqlite3'
 
+# Production group
+group :production do
+  # Gems specifically for Heroku go here
+  gem 'pg'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,7 +21,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+  gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -36,5 +42,3 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-gem 'therubyracer'
